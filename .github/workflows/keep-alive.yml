@@ -1,0 +1,17 @@
+name: Keep Streamlit apps awake
+
+on:
+  schedule:
+    # Runs every 8 hours (Streamlit puts apps to sleep after 12 hours)
+    - cron: '0 */8 * * *'
+  workflow_dispatch: # Allows you to trigger it manually from GitHub
+
+jobs:
+  keep-alive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Wake up Streamlit App
+        uses: gpenessot/streamlit-keep-alive@v1
+        with:
+          app-urls: |
+            https://oscar-s-website-2015.streamlit.app
