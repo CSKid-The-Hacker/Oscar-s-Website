@@ -8,3 +8,4 @@ st.link_button("K++ GitHub", "https://github.com/Toogic/K-/tree/main")
 
 st.subheader("Everything else")
 st.write("idk")
+st.write("I still dont know")
